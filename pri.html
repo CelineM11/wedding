@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Use your CSS file -->
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="WebsitePersonal.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="profolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="scheduling.html">Scheduling</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section id="payment-form">
+        <h1>Secure Payment</h1>
+        <p>Complete your payment to confirm your booking.</p>
+
+        <form action="https://secure-payment-gateway.com/process" method="POST"> <!-- Replace with real gateway -->
+            <!-- Package Information -->
+            <div>
+                <label for="package-name">Selected Package:</label>
+                <input type="text" id="package-name" name="package" readonly>
+            </div>
+            <div>
+                <label for="deposit-amount">Deposit Amount:</label>
+                <input type="text" id="deposit-amount" name="deposit" readonly>
+            </div>
+            <div>
+                <label for="remaining-balance">Remaining Balance (Due 24hrs Before Event):</label>
+                <input type="text" id="remaining-balance" name="balance" readonly>
+            </div>
+
+            <!-- Card Details -->
+            <h2>Payment Details</h2>
+            <div>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div>
+                <label for="card-expiry">Expiry Date:</label>
+                <input type="month" id="card-expiry" name="card-expiry" required>
+            </div>
+            <div>
+                <label for="card-cvv">CVV:</label>
+                <input type="text" id="card-cvv" name="card-cvv" placeholder="123" maxlength="3" required>
+            </div>
+
+            <!-- Billing Details -->
+            <h2>Billing Information</h2>
+            <div>
+                <!-- Billing details fields -->
+            </div>
+
+            <button type="submit">Pay Now</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch package and price information from pricing.html
+            fetch('pricing.html')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const packageName = doc.getElementById('package-name').innerText;
+                    const packagePrice = doc.getElementById('package-price').innerText;
+
+                    // Populate the form fields
+                    document.getElementById('package-name').value = packageName;
+                    document.getElementById('deposit-amount').value = packagePrice;
+                    document.getElementById('remaining-balance').value = calculateRemainingBalance(packagePrice);
+                });
+
+            function calculateRemainingBalance(price) {
+                // Assuming a 50% deposit
+                const deposit = parseFloat(price.replace('$', '')) / 2;
+                return `$${deposit.toFixed(2)}`;
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- Insert CSS here -->
+<style>
+    /* Pricing Page Styling */
+#pricing {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.pricing-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.pricing-card button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.pricing-card button:hover {
+    background-color: #555;
+}
+
+/* Payment Form Styling */
+#payment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+#payment-form form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+#payment-form form div {
+    margin-bottom: 15px;
+}
+
+#payment-form form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#payment-form form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #0a0a0a; /* Text color */
+    background-image: url('images/images117.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Header and Navigation Styling */
+header {
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    border-radius: 4px;
+}

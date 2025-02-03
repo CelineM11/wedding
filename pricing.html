@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="WebsitePersonal.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="profolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="scheduling.html">Scheduling</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <h2>Wedding Photography Packages</h2>
+        <div class="pricing-container">
+            <div class="pricing-card">
+                <h3>Basic Package</h3>
+                <p>Perfect for small weddings with a focus on capturing essential moments.</p>
+                <ul>
+                    <li>Up to 4 hours of photography</li>
+                    <li>200+ edited photos</li>
+                    <li>Online gallery for viewing and downloading</li>
+                    <li>Price: $1,500</li>
+                </ul>
+                <a href="scheduling.html" class="book-now-button"><button>Book Now</button></a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Standard Package</h3>
+                <p>Ideal for medium-sized weddings with more time to capture all the moments.</p>
+                <ul>
+                    <li>Up to 8 hours of photography</li>
+                    <li>500+ edited photos</li>
+                    <li>Online gallery and USB drive with all photos</li>
+                    <li>Price: $3,000</li>
+                </ul>
+                <a href="scheduling.html" class="book-now-button"><button>Book Now</button></a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Premium Package</h3>
+                <p>Comprehensive coverage for large weddings with everything captured beautifully.</p>
+                <ul>
+                    <li>Up to 12 hours of photography</li>
+                    <li>1000+ edited photos</li>
+                    <li>Online gallery, USB drive, and printed album</li>
+                    <li>Price: $5,000</li>
+                </ul>
+                <a href="scheduling.html" class="book-now-button"><button>Book Now</button></a>
+            </div>
+        </div>
+    </section>
+    
+</div>
+</body>
+</html>
+
+ 
+<!-- Insert CSS here -->
+<style>
+   /* General Reset and Body Styling */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #0a0a0a; /* Text color */
+    background-image: url('images/images117.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Header and Navigation Styling */
+header {
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    border-radius: 4px;
+}
+
+/* Pricing Section Styling */
+#pricing {
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Light overlay for pricing section */
+}
+
+#pricing h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.book-now-button button {
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-button button:hover {
+    background-color: #004d99;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #pricing {
+        padding: 40px 10px;
+    }
+
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #pricing h2 {
+        font-size: 28px;
+    }
+}

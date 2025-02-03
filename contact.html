@@ -1,0 +1,309 @@
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+        <ul>
+            <li><a href="WebsitePersonal.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="profolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="scheduling.html">Scheduling</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, or if you'd like to discuss your wedding photography needs, feel free to get in touch with us using the form below.</p>
+    <form action="con.html" method="POST" class="contact-form">
+        <label for="contact-name">Your Name:</label>
+        <input type="text" id="contact-name" name="contact-name" required>
+
+        <label for="contact-email">Your Email:</label>
+        <input type="email" id="contact-email" name="contact-email" required>
+
+        <label for="contact-message">Your Message:</label>
+        <textarea id="contact-message" name="contact-message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+</body>
+</html>
+
+
+
+<!-- Insert CSS here -->
+<style>
+    /* General Reset */
+/* Background no overlay */
+body {
+    background-image: url('images/images122.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0a0a0a; /* Text color */
+    position: relative;
+}
+
+/* Content on top of the background */
+main {
+    position: left;
+    z-index: 1; /* Ensures the content stays above the overlay */
+    text-align: left;
+    color: black;
+    padding: 5px;
+}
+
+/* To make images a bit smaller on display */
+img {
+    max-width: 100%; /* Make the image size responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional: Add a hover effect for a more dynamic appearance */
+img:hover {
+    transform: scale(0.90); /* Slightly shrink the image on hover */
+}
+
+/* General Body and Background Styling */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header and Navigation Styling */
+header {
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    border-radius: 4px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu when hovering over the parent */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Translucent background for dropdown */
+    min-width: 180px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Active link or hover effect */
+nav ul li a.active {
+    background-color: #fff;
+    color: #000;
+}
+
+/* General Layout for About Section */
+#about {
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    height: 100vh; /* Takes full viewport height */
+}
+
+/* Overlay to create translucency */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slight dark overlay */
+    z-index: -1;
+}
+
+/* Title Styling */
+#about h2 {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Profile Container Styling */
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Adjusted margin */
+}
+
+/* Profile Image */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Bio Section */
+.bio {
+    flex: 1;
+    max-width: 650px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7); /* Translucent white background */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Slight blur effect */
+    color: #333;
+    font-size: 0.95em; /* Smaller font */
+    line-height: 1.6;
+    margin-top: 60px; /* Added margin to move box lower */
+}
+
+/* Bio Title Styling */
+.bio h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Bio Paragraph Styling */
+.bio p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Visit Time Section */
+#visit-time-container {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em; /* Smaller font size */
+    color: #bbb;
+}
+
+#visit-time {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #004d99;
+}

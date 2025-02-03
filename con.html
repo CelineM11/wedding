@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+
+ <!-- Header Navigation -->
+ <header>
+    <nav>
+        <ul>
+            <li><a href="WebsitePersonal.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="profolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="scheduling.html">Scheduling</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Confirmation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> <!-- Elegant font -->
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f4f4f4;
+            color: #e9e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .message-container {
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #e0e9e9;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #ece1e1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="message-container">
+        <h1>Thank You for Reaching Out!</h1>
+        <p>We will get in touch with you shortly. We look forward to working with you!</p>
+    </div>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+
+</body>
+</html>
+
+  <!-- Insert CSS here -->
+  <style>
+    /* General Reset */
+/* Background with Light Color Overlay */
+body {
+    background-image: url('images/images100.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0a0a0a; /* Text color */
+    position: relative;
+}
+
+/* Adding a light color overlay */
+body::before {
+    content: '';
+    position: light;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(183, 181, 181, 0.288); /* Light white overlay */
+    z-index: 1;
+}
+
+/* Content on top of the background */
+main {
+    position: left;
+    z-index: 1; /* Ensures the content stays above the overlay */
+    text-align: left;
+    color: black;
+    padding: 10px;
+}
+
+
+/* To make images a bit smaller on display */
+img {
+    max-width: 100%; /* Make the image size responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Optional: Add a hover effect for a more dynamic appearance */
+img:hover {
+    transform: scale(0.90); /* Slightly shrink the image on hover */
+}
+
+/* Header and Navigation Styling */
+header {
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    border-radius: 4px;
+}
